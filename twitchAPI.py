@@ -35,8 +35,16 @@ class TwitchAPI:
   def get_user_query(self, user):
     return 'streams?login={0}'.format(user)
 
-  def get_user_videos_query(self, user_id):
-    return 'videos?user_id={0}&first=100'.format(user_id)
+  def get_streamers(self):
+    return 'streams?language=pt'
+
+  def get_streamer_config(self, name):
+    return 'users?login={0}&first=1'.format(name)
+
+  def get_user_videos_query(self, user_id, after):
+    if(after==''):
+      return 'videos?user_id={0}&first=100'.format(user_id)
+    return 'videos?user_id={0}&first=100&after={1}'.format(user_id, after)
 
   def get_games_query(self):
     return 'games/top'
