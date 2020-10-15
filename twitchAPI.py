@@ -26,7 +26,7 @@ class TwitchAPI:
     #print(response.content)
     response_json = response.json()
     print_response = json.dumps(response_json, indent=self.INDENT)
-    #print(print_response)
+    print(print_response)
     return response.json()
 
   def get_user_streams_query(self, user_login):
