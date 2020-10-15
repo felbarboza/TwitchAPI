@@ -23,10 +23,10 @@ class TwitchAPI:
     return response
 
   def printResponse(self, response):
-    print(response.content)
+    #print(response.content)
     response_json = response.json()
     print_response = json.dumps(response_json, indent=self.INDENT)
-    print(print_response)
+    #print(print_response)
     return response.json()
 
   def get_user_streams_query(self, user_login):
@@ -36,8 +36,11 @@ class TwitchAPI:
     return 'streams?login={0}'.format(user)
 
   def get_user_videos_query(self, user_id):
-    return 'videos?user_id={0}&first=50'.format(user_id)
+    return 'videos?user_id={0}&first=100'.format(user_id)
 
   def get_games_query(self):
     return 'games/top'
+
+  def get_sub_count(self, user_id):
+    return 'subscriptions?broadcaster_id={0}'.format(user_id)
   
