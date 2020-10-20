@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import csv
 
-streamers=["RatoBorrachudo", "keiozin", "Hayashii", "hastad", "boltz", "pijack11"]
+streamers=["alanzoka", "Cellbit", "XANDAOOGOD", "Gaules", "YoDa", "Baiano", "brtt", "jukes", "forever", "Smurfdomuca", "gafallen", "ziGueira", "adolfz", "fer", "Rakin", "aXtLOL", "SkipNhO", "jovirone", "calango", "jean_mago", "Felps", "RatoBorrachudo", "keiozin", "Hayashii", "hastad", "boltz", "pijack11"]
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
