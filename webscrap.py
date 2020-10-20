@@ -9,8 +9,8 @@ options.add_argument('headless')
 
 driver = webdriver.Chrome(options=options)
 
-with open('data2.csv', 'w', newline='') as file:
-  writer = csv.writer(file)
+with open('data.csv', 'w', newline='') as file:
+  writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC, delimiter=';')
   writer.writerow(["Streamer", "Date", "Duration", "Viewers"])
   for streamer in streamers:
     driver.get('https://twitchtracker.com/'+streamer+'/streams')
