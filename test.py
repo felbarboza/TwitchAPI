@@ -8,8 +8,6 @@ def printResponse(query):
   response = controllerAPI.get_response(query)
   responseJSON = controllerAPI.printResponse(response)
   return responseJSON
-
-
 #query = controllerAPI.get_user_streams_query(user_login)
 
 #query = controllerAPI.get_user_query(user_login)
